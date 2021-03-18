@@ -1,0 +1,37 @@
+{
+  "name": "@fdiskas/devtalks-ui-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "module": "build/esm/index.js",
+  "typings": "build/typings/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf build typings",
+    "build": "rollup -c",
+    "postbuild": "copyfiles -f typings/components/**/* build/typings"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "@types/react": "^16.8.6 || ^17.0.0",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-image": "^2.0.6",
+    "copyfiles": "^2.4.1",
+    "rollup": "^2.41.5",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.30.0"
+  }
+}
