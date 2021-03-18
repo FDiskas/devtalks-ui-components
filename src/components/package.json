@@ -8,7 +8,7 @@
   "scripts": {
     "prebuild": "rimraf build typings",
     "build": "rollup -c",
-    "postbuild": "copyfiles -f typings/components/**/* build/typings"
+    "postbuild": "copyfiles -f typings/components/**/* build/typings && rimraf typings"
   },
   "keywords": [],
   "author": "",
